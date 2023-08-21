@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Task2.Models.Companydetails>
+
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>Home View</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var d in ViewData["Companydetails"] as IList<Task2.Models.Companydetails>)
+        {
+            <tr>
+                <td>@d.Id</td>
+                <td>@d.Name</td>
+                <td>@d.Description</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+<br/>
+<div style="background-color:hotpink;color:white">
+    <p style="font-weight:bold">Skillsets provided in the Company are</p>
+    <ul>
+        @foreach (string skills in ViewBag.Skillsets)
+        {
+            <li>@skills</li>
+        }
+    </ul>
+</div>
+
+
