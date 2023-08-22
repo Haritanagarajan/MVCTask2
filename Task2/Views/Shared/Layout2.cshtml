@@ -16,8 +16,16 @@
             Html.RenderPartial("ParsialNavbar");
         }
     </div>
+    <div style="background-color:plum" class="text-center">
+        @RenderSection("Note", true);
+    </div>
     <div class="container body-content">
         @RenderBody()
+        <br />
+        <br />
+        <div style="background-color:palevioletred">
+            @RenderSection("Footer", true);
+        </div>
         <hr />
         <footer style="background-color:darkgrey">
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application using Layout2 UI</p>

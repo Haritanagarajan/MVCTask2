@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Task2.Models;
+using static System.Collections.Specialized.BitVector32;
 
 namespace Task2.Controllers
 {
@@ -27,5 +28,6 @@ namespace Task2.Controllers
         {
             return PartialView("ParsialNavbar");
         }
+       
     }
 }

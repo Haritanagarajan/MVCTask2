@@ -1,8 +1,32 @@
-﻿
-@{
-    ViewBag.Title = "Employee";
+﻿@model  Task2.ViewModels.TrainerTrainee
+
+@{ 
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<h1>Employee View</h1>
 
-<h2>Employee view</h2>
 
+<table class="table">
+    <tr>
+        <th>TrainerId</th>
+        <th>TrainerName</th>
+        <th>Subject</th>
+        <th>TraineeId</th>
+        <th>TrainerName</th>
+        <th>TraineeName</th>
+
+    </tr>
+
+    <tr>
+        <td>@Model.trainer.TrainerId</td>
+        <td>@Model.trainer.TrainerName</td>
+        <td>@Model.trainer.Subject</td>
+
+        <td>@Model.trainee.TraineeId</td>
+        <td>@Model.trainee.TrainerName</td>
+        <td>@Model.trainee.TraineeName</td>
+    </tr>
+
+  
+
+</table>
